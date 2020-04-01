@@ -20,7 +20,7 @@ export const createFetchFunction = (apiUrl = '', action) => {
 
     // set onload hanlder
     const onload = action.onload || (res => res);
-    const onerror = action.onerror || (res => null);
+    const onerror = action.onerror || (res => res);
 
     // internal handler
     return (url, load, error, progress, abort, headers) => {
